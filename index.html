@@ -13,31 +13,95 @@
             body {
                 background-color: #f6f6f9;
             }
-                splash-screen {
-                    display: block;
-                    position: fixed;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: 10000;
-                    opacity: 1;
-                    pointer-events: none;
-                    transition: 0.3s ease opacity;
-                }
-                splash-screen[fade] {
-                    opacity: 0;
-                }
-                splash-screen svg {
-                    width: 20vw;
-                    transform: translateY(calc(var(--y) * 18%));
-                }
+            .main {
+                display: block;
+                position: fixed;
+                top: calc(50% - 10vw);
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10000;
+                opacity: 1;
+                pointer-events: none;
+                transition: 0.3s ease opacity;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .main > div {
+                font-size: 5vw;
+            }
+            .main > div > em {
+                background: var(--color-danger-hover);
+                color: white;
+                border-radius: 0.5em;
+                font-style: normal;
+                padding: 0 0.3em;
+            }
+            splash-screen {
+                margin-top: 4vw;
+                margin-bottom: 2vw;
 
+            }
+            splash-screen[fade] {
+                opacity: 0;
+            }
+            splash-screen svg {
+                width: 20vw;
+                transform: translateY(calc(var(--y) * 18%));
+            }
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #8f53c9;
+    --color-danger-hover: #843ac9;
+    --color-great: #ff7782;
+    --color-great-hover: #ff6874;
+    --color-success: #41f1b6;
+    --color-wanring: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --table-head: #eaeef5;
+
+    --color-light-op: rgba(132, 139, 200, 0.4);
+    --color-disabled-wash: #a6a8c591;
+
+    --color-primary-variant: #111e88;
+    --color-dark-variart: #677483;
+    --color-background: #f6f6f9;
+
+    --input-bg: hsla(208, 50%, 50%, 6.5%);
+    --input-bg-hover: hsla(208, 50%, 50%, 14%);
+    --input-text: #8c9aaf;
+    --input-shadow: hsla(208, 92%, 54%, 0.169);
+
+    --hover-shadow: 0 0 0.7rem var(--color-light-op);
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --popup-padding: 3.5rem;
+    --padding-1: 1.2rem;
+    --button-padding: 0.5rem 1rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    font-family: 'Poppins', sans-serif;
+}
 
     </style>
 
     
 </head>
 <body>
-    <splash-screen></splash-screen>
+    <div class = main>
+        <splash-screen></splash-screen>
+        <div> Hello ... <em>Something</em></div>
+    </div>
 </body>
 </html>
