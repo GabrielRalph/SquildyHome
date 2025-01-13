@@ -84,6 +84,9 @@ for (let title in pages_urls) {
 
 let main = new SvgPlus(document.querySelector("main"));
 main.innerHTML = await proms.home;
+setTimeout(() => {
+    document.querySelector("squidly-logo[full]").hide(0.3);
+}, 1000)
 
 function updateScrollWatches(){
     let scrollWatches = document.querySelectorAll("[scroll-relative]");
