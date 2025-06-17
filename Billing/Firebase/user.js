@@ -83,7 +83,7 @@ async function signout(){
 async function signup(email, password, firstName, lastName) {
   try {
       // Register user
-      await createUserWithEmailAndPassword(Auth, email, password);
+      await createUserWithEmailAndPassword(email, password);
 
       // Set user info
       await setUserInfo({firstName, lastName});
